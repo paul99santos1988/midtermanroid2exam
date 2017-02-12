@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MidtermAnroid2Exam</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="menu_settings">Clear</string>
+    <string name="title_activity_main">ListView with JSON from URL</string>
+    <string name="str_iv_flag">Flag</string>
+    <string name="action_settings">Clear</string>
+</resources>
