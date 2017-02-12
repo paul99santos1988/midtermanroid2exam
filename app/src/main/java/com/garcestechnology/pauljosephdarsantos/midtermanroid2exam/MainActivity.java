@@ -81,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_settings:
+                searchBox = (EditText) findViewById(R.id.editText);
+                searchBox.setText("");
                 mListView = (ListView) findViewById(R.id.lv_contries);
                 mListView.setAdapter(null);
                 infoText = (TextView) findViewById(R.id.textView);
@@ -183,7 +185,8 @@ public class MainActivity extends AppCompatActivity {
                 hm.put("flag_path", imgUrl);
                 hm.put("position", i);
 
-                //imageLoaderTask.execute(hm);
+                imageLoaderTask.execute(hm); //Error here
+                adapter.notifyDataSetChanged();
             }
         }
     }
@@ -229,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
             SimpleAdapter adapter = (SimpleAdapter) mListView.getAdapter();
             HashMap<String, Object> hm = (HashMap<String, Object>) adapter.getItem(position);
             hm.put("flag", path);
-            adapter.notifyDataSetChanged();
+
         }
     }
 }

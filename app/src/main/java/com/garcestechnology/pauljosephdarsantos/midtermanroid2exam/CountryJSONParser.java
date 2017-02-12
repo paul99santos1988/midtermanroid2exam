@@ -48,7 +48,7 @@ public class CountryJSONParser {
 
         try {
             countryName = jCountry.getString("name");
-            flag = jCountry.getJSONArray("image").getJSONObject(2).getString("#text");
+            flag = jCountry.getJSONArray("image").getJSONObject(0).getString("#text");
             language = jCountry.getString("artist");
 
 
